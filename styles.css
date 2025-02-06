@@ -1,0 +1,91 @@
+/* Estilos para el cuerpo de la página */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #EEA1CD;
+}
+
+/* ===================== Menubar ===================== */
+.menubar {
+    background-color: #333;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.menubar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.menubar li {
+    margin: 0 15px;
+}
+
+.menubar a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.menubar a:hover {
+    color: #EEA1CD;
+}
+
+/* ===================== Carrusel ===================== */
+/* Contenedor principal del carrusel */
+.carousel {
+    overflow: hidden; /* Evita que las imágenes se salgan del área visible */
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto; /* Ajuste de margen para separar del menubar */
+    position: relative; /* Permite posicionar los botones de navegación dentro del carrusel */
+}
+
+/* Contenedor de las imágenes del carrusel */
+.carousel-images {
+    display: flex; /* Organiza las imágenes en fila */
+    transition: transform 0.5s ease; /* Hace que el cambio de imagen sea suave */
+    width: 100%;
+}
+
+/* Estilos para las imágenes dentro del carrusel */
+.carousel-images img {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* Evita que la imagen se deforme, ajustándola dentro del contenedor */
+    max-height: 700px;
+    flex-shrink: 0; /* Evita que las imágenes se reduzcan automáticamente */
+    display: block;
+}
+
+/* Botones de navegación (si los llegas a necesitar en el carrusel) */
+button {
+    position: absolute; /* Se posicionan sobre las imágenes */
+    top: 50%;
+    transform: translateY(-50%); /* Centra verticalmente los botones */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    border: none;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10; /* Asegura que los botones estén por encima de las imágenes */
+}
+
+/* Cambia el color del botón al pasar el mouse */
+button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Posición del botón de anterior */
+button.prev {
+    left: 0;
+}
+
+/* Posición del botón de siguiente */
+button.next {
+    right: 0;
+}
